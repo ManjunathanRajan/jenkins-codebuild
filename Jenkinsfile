@@ -1,5 +1,7 @@
 @Library('jenkins-codebuild') _
 
+import com.example.CustomAWSCredentials
+
 pipeline {
     agent any
     stages {
