@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        jdk 'aws-cred'
+        jdk 'jdk8'
     }
     stages {
         stage('Build') {
