@@ -19,7 +19,7 @@ pipeline {
                         def region = 'us-west-2'
                         
                         sh """
-                            java -cp "src:aws-java-sdk/lib/*:aws-java-sdk/third-party/lib/*" -Daws.accessKeyId=\$AWS_ACCESS_KEY_ID -Daws.secretKey=\$AWS_SECRET_ACCESS_KEY -Daws.region=$region com.example.CodeBuildTrigger "$project_name"
+                            java -cp "src:aws-java-sdk/lib/*:aws-java-sdk/third-party/lib/*" -Daws.accessKeyId=**** -Daws.secretKey=**** -Daws.region=us-west-2 com.example.CodeBuildTrigger jenkins-codebuild
                         """
                     }
                 }
