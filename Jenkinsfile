@@ -9,7 +9,7 @@ pipeline {
                 script {
                     withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-codebuild']]) {
                         sh 'curl -L -o aws-sdk-java.zip https://sdk-for-java.amazonwebservices.com/latest/aws-java-sdk.zip'
-                        sh 'unzip -q aws-sdk-java.zip'
+                        sh 'unzip -q -o aws-sdk-java.zip'
                         
                         // Download the CodeBuildTrigger.class file from GitHub
                         sh 'mkdir -p src/com/example'
